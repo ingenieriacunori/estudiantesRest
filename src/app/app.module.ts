@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Clase HttpClient servicios REST
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +25,9 @@ import { EstudianteService } from './shared/servicios/estudiante.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [EstudianteService],
   bootstrap: [AppComponent]

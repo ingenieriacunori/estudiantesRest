@@ -12,22 +12,20 @@ export class ListarEstudianteComponent implements OnInit {
   datos: Iestudiante[] = [];
 
   constructor(
-    //FORMA INCORRECTA
-    private _api = EstudianteService,
-
     //FORMA CORRECTDA
     private _servicio: EstudianteService
   ) { }
 
   ngOnInit(): void {
-
+    this.getAllData();
   }
 
   async getAllData() {
     try {
       this.datos = await this._servicio.getData();
+      //alert('Registros obtenidos exitosamente');
     } catch (error) {
-
+      alert(error.value)
     }
   }
 

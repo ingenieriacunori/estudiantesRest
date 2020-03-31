@@ -1,1 +1,21 @@
-<p>crear-estudiante works!</p>
+
+<form [formGroup]="datos">
+<div>
+    <input type="text" 
+    id="nombreestudiante" 
+    placeholder="Nombre del estudiante" 
+    formControlName="nombreestudiante">
+
+    <input type="text" 
+    id="direccionestudiante" 
+    placeholder="Dirección del estudiante"
+    formControlName="direccionestudiante">
+
+    <input type="text" 
+    id="carreraestudiante" 
+    placeholder="Carrera del estudiante"
+    formControlName="carreraestudiante">
+
+    <input type="button" value="Guardar" (click)="nuevoRegistro()">
+</div>
+</form>
